@@ -1,4 +1,6 @@
 import random
+
+
 class RandomizedSet:
     def __init__(self) -> None:
         self.indexes_dict = dict()
@@ -22,7 +24,8 @@ class RandomizedSet:
 
     def getRandom(self):
         if len(self.randomized_set) != 0:
-            index = random.randrange(0,len(self.randomized_set))
+            index = random.randrange(0, len(self.randomized_set))
             return self.randomized_set[index]
-        
-print(random.randrange(0,4))
+
+
+print(random.randrange(0, 4))

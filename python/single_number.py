@@ -1,15 +1,11 @@
+from collections import Counter
+
+
 def singleNumber(nums: list[int]):
     if len(nums) == 1:
         return nums[0]
-    number_dict = dict()
-    for val in nums:
-        if number_dict.get(val) is None:
-            number_dict[val] = 1
-        else:
-            number_dict[val] += 1
-    for val in nums:
-        if number_dict[val] == 1:
-            return val
+    number_dict = Counter(nums)
+    return list(filter(lambda key: number_dict[key] == 1, number_dict.keys()))[0]
 
 
-print(singleNumber([2, 2, 1]))
+print(singleNumber([4, 1, 2, 1, 2]))

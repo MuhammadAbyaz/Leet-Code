@@ -1,5 +1,5 @@
 def asteroidCollision(asteroids: list[int]) -> list[int]:
-    stack = []
+    stack: list[int] = []
     for val in asteroids:
         if val < 0 and len(stack) > 0 and stack[len(stack) - 1] > 0:
             while (

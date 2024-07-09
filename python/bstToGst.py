@@ -8,10 +8,6 @@ class TreeNode:
 def dfs(root: TreeNode, total):
     if root is None:
         return
-    if root.right is None:
-        total.append(root.val)
-        root.val = sum(total)
-        return
     dfs(root.right, total)
     total.append(root.val)
     root.val = sum(total)
